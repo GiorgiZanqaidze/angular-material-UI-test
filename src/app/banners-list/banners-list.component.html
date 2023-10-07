@@ -1,0 +1,10 @@
+<main>
+  <div class="grid grid-cols-2 items-center gap-10 w-[100rem] mx-auto mt-20">
+    <article *ngFor="let banner of banners" class="bg-red-500 cursor-pointer">
+      <h1>{{banner.id}}</h1>
+    </article>
+  </div>
+  <div class="flex justify-center">
+    <mat-paginator [pageIndex]="page" showFirstLastButtons="true" hidePageSize #paginator pageSize="10" [length]="totalPages" (page)="onPageChange($event)"></mat-paginator>
+  </div>
+</main>
